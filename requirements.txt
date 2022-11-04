@@ -1,1 +1,2 @@
-flack
+flask
+firebase_admin
