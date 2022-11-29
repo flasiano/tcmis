@@ -1,11 +1,11 @@
 import firebase_admin
-from firebase_admin import credentials, firestor,make_response, jsonify
+from firebase_admin import credentials, firestor
 cred = credentials.Certificate("severaccountkey.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request, make_response, jsonify
 from datetime import datetime
 app = Flask(__name__)
 
@@ -64,5 +64,5 @@ def webhook():
        
 
 
-#if __name__ == "__main__":
-    #app.run()
+if __name__ == "__main__":
+    app.run()
